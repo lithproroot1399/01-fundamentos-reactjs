@@ -7,7 +7,9 @@
     --grey-700: #29292e;
     --grey-800: #202024;
     --grey-900: #121214;
-    
+
+    --green: #00875f;
+ 
 }
 
 * {
@@ -17,5 +19,13 @@
 }
 
 body {
+    background: var(--grey-900);
+    color: var(--grey-300);
+    -webkit-font-smoothing: antialiased;
+}
 
+body, input, textarea, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
 }
