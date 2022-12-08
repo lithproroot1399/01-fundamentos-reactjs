@@ -18,8 +18,8 @@ export function Sidebar() {
 
         <footer>
             <a href='#'>
-                <PencilLine />
-                Editar sua profile
+                <PencilLine size={18} />
+                Editar seu prerfil
             </a>
 
         </footer>
