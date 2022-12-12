@@ -10,10 +10,6 @@
     border-radius: 8px;
 }
 
-.commentBox {
-    flex: 1;
-}
-
 .commentContent {
     background: var(--grey-700);
     border-radius: 8px;
@@ -22,7 +18,7 @@
 
 .commentContent header {
     display: flex;
-    align-items: center;
+    align-items: flex-start ;
     justify-content: space-between;
 }
 
@@ -49,6 +45,41 @@
 }
 
 .commentContent header button:hover {
-    color: var(--red-500)
+    color: var(--red-500); 
+}
 
+.commentContent p {
+    margin-top: 1rem;
+    color: var(--grey-300);
+}
+
+.commentBox footer {
+    margin-top: 1rem;
+}
+
+.commentBox footer button {
+    background: transparent;
+    border: 0;
+    color: var(--grey-400);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+.commentBox {
+    flex: 1;
+}
+
+.commentBox footer button:hover {
+    color: var(--green-300);
+}
+
+.commentBox footer button svg {
+    margin-right: 0.5rem;
+}
+
+.commentBox footer button span::before {
+    content: "*\2022";
+    padding: 0 0.25rem;
 }
