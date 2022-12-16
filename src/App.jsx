@@ -6,6 +6,41 @@ import styles from './App.module.css';
 
 import  "./global.css";
 
+// author: { avatar_url: "", name: "", role:""}
+//publishedAt: Date
+//content: String
+
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: 'http://github.com/lithproroot1399.png',
+      nome: 'Leandro Sávio',
+      role: 'CTO @ PROROOT'
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋'},
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare🚀'},
+      { type: 'link', content: 'jane.design/doctorcare'},
+    ],
+    publishedAt: new Date('2022-05-03 20:00:00'), 
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: 'http://github.com/diego3g.png',
+      nome: 'Diego Fernandes',
+      role: 'CTO @ Rocketseat'
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋'},
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare🚀'},
+      { type: 'link', content: 'jane.design/doctorcare'},
+    ],
+    publishedAt: new Date('2022-12-16 20:00:00'), 
+  },
+];
+
 export function App() {
  return (
     <div>
@@ -14,14 +49,15 @@ export function App() {
   <div className={styles.wrapper}>
     <Sidebar />
     <main>
-    <Post 
-      author=  "Leandro Sávio"
-      content= "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit laudantium debitis incidunt eum rem harum, ab voluptatem culpa obcaecati doloremque corporis quisquam quam dolorum nihil architecto animi quas veritatis."
-      />
-    <Post 
-      author= "Caio Araujo"
-      content= "Aprendendo SQL com Leandro"
-      />
+    {posts.map(post => {
+      return (
+      <Post 
+        author={post.author}
+        content={post.content}
+        publishedAt={post.publishedAt}
+        />
+        )
+    })}
     </main>
   </div>
   </div>
