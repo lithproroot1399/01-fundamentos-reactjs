@@ -7,11 +7,10 @@ import { Comment } from './Comment';
 import styles from './Post.module.css';
 
 export function Post({ author, publishedAt, content }) {
-    const [comments] = useState ([
-        1,
-        2,
+    const [comments, setComments] = useState ([
+       'Post muito bacana!, hen?!'
     ])
-    
+
     const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
         locale: ptBR,
     })
@@ -24,9 +23,8 @@ export function Post({ author, publishedAt, content }) {
     function handleCreateNewComment() {
         event.preventDefault()
 
-        setComments();
-
-        console.log(comments)
+        setComments([...comments, comments.length + 1]);
+        
     }
 
     return (
@@ -78,7 +76,7 @@ export function Post({ author, publishedAt, content }) {
 
         <div className={styles.commentList}>
           {comments.map(comment => {
-            return <Comment />
+            return <Comment content={comment} />
           })}
         </div>
       </article>
