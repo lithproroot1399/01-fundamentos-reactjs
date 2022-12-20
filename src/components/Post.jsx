@@ -51,6 +51,7 @@ export function Post({ author, publishedAt, content }) {
         </header>
 
         //Adicionando comentario para testar GitHub
+        //Novos registros
 
             <div className={styles.content}>
             {content.map(line => {
