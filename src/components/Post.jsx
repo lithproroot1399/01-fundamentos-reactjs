@@ -50,6 +50,8 @@ export function Post({ author, publishedAt, content }) {
             </time>
         </header>
 
+        //Adicionando comentario para testar GitHub
+
             <div className={styles.content}>
             {content.map(line => {
                 if (line.type === 'paragraph') {
