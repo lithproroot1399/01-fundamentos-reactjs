@@ -43,7 +43,7 @@ export function Post({ author, publishedAt, content }) {
     function deleteComment(commentToDelete) {
         setComments();
         const commentsWithoutDeleteOne = comments.filter(comment => {
-            return comment !== commentToDelete;
+            return comment = commentToDelete;
         })
 
         setComments(commentsWithoutDeleteOne);
